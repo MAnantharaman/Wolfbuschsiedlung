@@ -71,8 +71,6 @@ Station014.addEventListener('click', Station14)
 const Station015= document.getElementById('Station15')
 Station015.addEventListener('click', Station15)
 
-const Loc0= document.getElementById('loc0')
-
 const Loc1= document.getElementById('loc1')
 Loc1.addEventListener('click', loc01)
 
@@ -1009,8 +1007,6 @@ const Zuruck017 = document.getElementById('zuruck17')
 Zuruck017.addEventListener('click', zuruck017)
 
 const Text01 = document.getElementById('Text1')
-const Text02 = document.getElementById('Text2')
-const Text03 = document.getElementById('Text3')
 
 const Text012 = document.getElementById('Text12')
 const Text022 = document.getElementById('Text22')
@@ -1316,6 +1312,12 @@ weiter012.addEventListener('click', weiter12)
 
 const weiter013= document.getElementById('weiter13')
 weiter013.addEventListener('click', weiter13)
+
+const weiter014= document.getElementById('weiter14')
+weiter014.addEventListener('click', weiter14)
+
+const weiter017= document.getElementById('weiter17')
+weiter017.addEventListener('click', weiter17)
 
 const weiter018= document.getElementById('weiter18')
 weiter018.addEventListener('click', weiter18)
@@ -2692,14 +2694,14 @@ function Station1(){
 }
 
 function Station2(){
-    Video01.play()
+    Video01.play();
     Video1.classList.remove('hide')
     Loc1.classList.add('hide')
     STfeld.classList.add('hide')
 }
 
 function Station3(){
-    Video02.play()
+    Video02.play();
     Video2.classList.remove('hide')
     Loc2.classList.add('hide')
     STfeld.classList.add('hide')
@@ -2802,7 +2804,6 @@ function Einleitung(){
     Video00.play()
     Video0.classList.remove('hide')
     Video0.classList.add('center')
-    Loc0.classList.add('hide')
 }
 
 function Information(){
@@ -3006,6 +3007,7 @@ function zuruck014(){
     Karte014.classList.add('hide')
     Zuruck014.classList.add('hide')
     Feld014.classList.add('Feld1')
+    weiter014.classList.remove('hide')
 }
 
 function zuruck017(){
@@ -3016,9 +3018,11 @@ function zuruck017(){
     Karte017.classList.add('hide')
     Zuruck017.classList.add('hide')
     Feld017.classList.add('Feld1')
+    weiter017.classList.remove('hide')
 }
 
 function weiter1(){
+    Video02.play();
     Feld01.classList.add('hide')
     Feld01.classList.remove('Feld1')
     Home01.classList.add('hide')
@@ -3029,7 +3033,6 @@ function weiter1(){
     Loc2.classList.add('hide')
     Video2.classList.remove('hide')
     Video2.classList.add('center')
-    Video02.play()
 }
 
 function weiter2(){
@@ -3198,6 +3201,31 @@ function weiter13(){
     Loc14.classList.add('hide')
     Video014.play()
     Seite013.classList.remove('container')
+}
+
+function weiter14(){
+    Feld014.classList.remove('Feld1')
+    Feld014.classList.add('hide')
+    Seite014.classList.remove('container')
+    Wo014.classList.add('hide')
+    Fragezeichen14.classList.add('hide')
+    Home014.classList.add('hide')
+    img14.classList.add('hide')
+    Startseite01.classList.remove('hide')
+    weiter014.classList.add('hide')
+}
+
+function weiter17(){
+    Video01.play()
+    Video1.classList.remove('hide')
+    Video1.classList.add('center')
+    Loc1.classList.add('hide')
+    Feld017.classList.remove('Feld1')
+    Feld017.classList.add('hide')
+    Seite017.classList.remove('container')
+    Fragezeichen17.classList.add('hide')
+    Home017.classList.add('hide')
+    weiter017.classList.add('hide')
 }
 
 function weiter18(){
@@ -3435,6 +3463,7 @@ function Fragzuruck14(){
     Seite015.classList.remove('container')
     Feld015.classList.remove('Feld1')
     Fragzuruck014.classList.add('hide')
+    weiter014.classList.remove('hide')
 }
 
 function Fragzuruck17(){
@@ -3447,6 +3476,8 @@ function Fragzuruck17(){
     Seite015.classList.remove('container')
     Feld015.classList.remove('Feld1')
     Fragzuruck017.classList.add('hide')
+    weiter017.classList.remove('hide')
+    Wo017.classList.remove('hide')
 }
 
 function Fragzuruck18(){
@@ -3669,6 +3700,7 @@ function Fragezeichen014(){
     Seite015.classList.add('container')
     Feld015.classList.add('Feld1')
     Fragzuruck014.classList.remove('hide')
+    weiter014.classList.add('hide')
 }
 
 function Fragezeichen018(){
@@ -3694,6 +3726,8 @@ function Fragezeichen017(){
     Seite015.classList.add('container')
     Feld015.classList.add('Feld1')
     Fragzuruck017.classList.remove('hide')
+    weiter017.classList.add('hide')
+    Wo017.classList.add('hide')
 }
 
 function Wo1(){
@@ -3862,6 +3896,7 @@ function Wo14(){
     Karte014.classList.remove('hide')
     Zuruck014.classList.remove('hide')
     Feld014.classList.remove('Feld1')
+    weiter014.classList.add('hide')
 }
 
 function Wo17(){
@@ -3872,6 +3907,7 @@ function Wo17(){
     Karte017.classList.remove('hide')
     Zuruck017.classList.remove('hide')
     Feld017.classList.remove('Feld1')
+    weiter017.classList.add('hide')
 }
 
 function loc01(){
@@ -3883,10 +3919,7 @@ function loc01(){
     Home01.classList.remove('hide')
     img1.classList.remove('hide')
     Feld01.classList.add('Feld1')
-    Text01.classList.remove('hide')
-    Text02.classList.add('hide')
-    Text03.classList.add('hide')
-    
+    Text01.classList.remove('hide')    
 }
 
 function loc02(){
@@ -3901,10 +3934,16 @@ function loc02(){
     Text012.classList.remove('hide')
     Text022.classList.add('hide')
     Text032.classList.add('hide')
+    Text042.classList.add('hide')
+    Text052.classList.add('hide')
     Next012.classList.remove('hide')
     Next022.classList.add('hide')
+    Next032.classList.add('hide')
+    Next042.classList.add('hide')
     Back012.classList.add('hide')
     Back022.classList.add('hide')
+    Back032.classList.add('hide')
+    Back042.classList.add('hide')
 }
 
 function loc03(){
@@ -3991,10 +4030,13 @@ function loc07(){
     Text017.classList.remove('hide')
     Text027.classList.add('hide')
     Text037.classList.add('hide')
+    Text047.classList.add('hide')
     Next017.classList.remove('hide')
     Next027.classList.add('hide')
+    Next037.classList.add('hide')
     Back017.classList.add('hide')
     Back027.classList.add('hide')
+    Back037.classList.add('hide')
 }
 
 function loc08(){
@@ -4009,10 +4051,13 @@ function loc08(){
     Text018.classList.remove('hide')
     Text028.classList.add('hide')
     Text038.classList.add('hide')
+    Text048.classList.add('hide')
     Next018.classList.remove('hide')
     Next028.classList.add('hide')
+    Next038.classList.add('hide')
     Back018.classList.add('hide')
     Back028.classList.add('hide')
+    Back038.classList.add('hide')
 }
 
 function loc09(){
@@ -4044,11 +4089,9 @@ function loc010(){
     Feld010.classList.add('Feld1')
     Text0110.classList.remove('hide')
     Text0210.classList.add('hide')
-    Text0310.classList.add('hide')
     Next0110.classList.remove('hide')
-    Next0210.classList.add('hide')
     Back0110.classList.add('hide')
-    Back0210.classList.add('hide')
+
 }
 
 function loc011(){
@@ -4080,11 +4123,8 @@ function loc012(){
     Feld012.classList.add('Feld1')
     Text0112.classList.remove('hide')
     Text0212.classList.add('hide')
-    Text0312.classList.add('hide')
     Next0112.classList.remove('hide')
-    Next0212.classList.add('hide')
     Back0112.classList.add('hide')
-    Back0212.classList.add('hide')
 }
 
 function loc013(){
@@ -4098,11 +4138,8 @@ function loc013(){
     Feld013.classList.add('Feld1')
     Text0113.classList.remove('hide')
     Text0213.classList.add('hide')
-    Text0313.classList.add('hide')
     Next0113.classList.remove('hide')
-    Next0213.classList.add('hide')
     Back0113.classList.add('hide')
-    Back0213.classList.add('hide')
 }
 
 function loc014(){
@@ -4116,11 +4153,8 @@ function loc014(){
     Feld014.classList.add('Feld1')
     Text0114.classList.remove('hide')
     Text0214.classList.add('hide')
-    Text0314.classList.add('hide')
     Next0114.classList.remove('hide')
-    Next0214.classList.add('hide')
     Back0114.classList.add('hide')
-    Back0214.classList.add('hide')
 }
 
 function Home(){
@@ -4287,6 +4321,7 @@ function Home14(){
     Home014.classList.add('hide')
     img14.classList.add('hide')
     Startseite01.classList.remove('hide')
+    weiter014.classList.add('hide')
 }
 
 function Home17(){
@@ -4296,6 +4331,7 @@ function Home17(){
     Fragezeichen17.classList.add('hide')
     Home017.classList.add('hide')
     Startseite01.classList.remove('hide')
+    weiter017.classList.add('hide')
 }
 
 function Home18(){
@@ -4743,6 +4779,7 @@ function next114(){
     Text0214.classList.remove('hide')
     Next0114.classList.add('hide')
     Back0114.classList.remove('hide')
+    weiter014.classList.remove('hide')
     }
     
 function back114(){
@@ -4757,6 +4794,7 @@ function next117(){
     Text0217.classList.remove('hide')
     Next0117.classList.add('hide')
     Back0117.classList.remove('hide')
+    weiter017.classList.remove('hide')
     }
     
 function back117(){
